@@ -4,6 +4,5 @@
                Kazuhiro Fukui},
   title     = {Image Harmonization with Attention-based Deep Feature Modulation},
   booktitle = {31st British Machine Vision Conference 2020, {BMVC} 2020},
-  publisher = {{BMVA} Press},
   year      = {2020}
 }
