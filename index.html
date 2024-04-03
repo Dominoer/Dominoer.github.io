@@ -68,12 +68,13 @@
         <img src="./index_files/profile.jpeg" alt="Guoqing's Profile Photo" style="width: 150px; height: auto; margin-right: 20px;">
         <div>
             <p>
-                I am currently a 3rd year Ph.D. student under the supervision of Assoc. Prof. <a href="http://iizuka.cs.tsukuba.ac.jp/index_eng.html">Satoshi Iizuka</a> and Prof. <a href="http://www.cvlab.cs.tsukuba.ac.jp/~kfukui/english/indexE.html">Kazuhiro Fukui</a> at the <a href="https://en.home.cvlab.cs.tsukuba.ac.jp/">Computer Vision Lab</a>, <a href="http://www.tsukuba.ac.jp/en/">University of Tsukuba</a>. My research interests are in computer vision, graphichs, image processing, and machine learning.
+                I am an assistant professor at the <a href="https://www.aoyama.ac.jp/en/">Aoyama Gakuin University</a>. I obtained my Ph.D. degree from the <a href="https://www.tsukuba.ac.jp/en/">University of Tsukuba</a> under the supervision of Prof. <a href="http://iizuka.cs.tsukuba.ac.jp/index_eng.html">Satoshi Iizuka</a> and Prof. <a href="http://www.cvlab.cs.tsukuba.ac.jp/~kfukui/english/indexE.html">Kazuhiro Fukui</a>. My research interests are in computer vision, graphics, image processing, and machine learning.
+                <!-- I am currently a 3rd year Ph.D. student under the supervision of Assoc. Prof. <a href="http://iizuka.cs.tsukuba.ac.jp/index_eng.html">Satoshi Iizuka</a> and Prof. <a href="http://www.cvlab.cs.tsukuba.ac.jp/~kfukui/english/indexE.html">Kazuhiro Fukui</a> at the <a href="https://en.home.cvlab.cs.tsukuba.ac.jp/">Computer Vision Lab</a>, <a href="http://www.tsukuba.ac.jp/en/">University of Tsukuba</a>. My research interests are in computer vision, graphichs, image processing, and machine learning. -->
             </p>
             <p>
                 <a href="https://github.com/Dominoer" target="_blank"><i class="fab fa-github fa-2x" style="margin-right: 15px;"></i></a>
                 <a href="https://scholar.google.com/citations?user=ulsTvQIAAAAJ&hl=en" target="_blank"><i class="ai ai-google-scholar fa-2x" style="margin-right: 15px;"></i></a>
-                <a href="mailto:hao_guoqing@cvlab.cs.tsukuba.ac.jp" target="_blank"><i class="fas fa-envelope fa-2x" style="margin-right: 15px;"></i></a>
+                <a href="mailto:hao@it.aoyama.ac.jp" target="_blank"><i class="fas fa-envelope fa-2x" style="margin-right: 15px;"></i></a>
             </p>
         </div>
     </div>
@@ -84,15 +85,33 @@
         <h2>News</h2>
         <font face="helvetica, ariel, 'sans serif'">
             <span style="font-size: 12pt;">
-                <b>[Oct. 2023]</b> A first-authored paper on image-based decay has been accepted IEEE Access. <br>
-                <b>[Sep. 2023]</b> I received the "Polyphony Digital Company Award" at Visual Computing (VC2023).  <br>
+                <b>[Mar. 2024]</b> I obtained my Ph.D. degree in Engineering with the Dean's Award. <br>
+                <b>[Oct. 2023]</b> A first-authored paper on image-based decay has been accepted to IEEE Access. <br>
+                <b>[Sep. 2023]</b> I received the "Polyphony Digital Company Award" at Visual Computing (VC2023). <br>
                 <b>[Aug. 2023]</b> A first-authored paper on texture synthesis has been accepted to SIGGRAPH Asia 2023 Conference Track. <br>
-                <b>[June 2023]</b> A co-authored paper on coffee leaf disease severity estimation has been accepted to MVA 2023 as a poster. <br>
-                <b>[July 2020]</b> Our work on image harmonization was accepted to The British Machine Vision Conference</a> (BMVC2020). <br>
+                <div id="olderNews" style="display: none;">
+                    <b>[June 2023]</b> A co-authored paper on coffee leaf disease severity estimation has been accepted to MVA 2023 as a poster. <br>
+                    <b>[July 2020]</b> Our work on image harmonization was accepted to The British Machine Vision Conference (BMVC2020). <br>
+                </div>
             </span>
         </font>
+        <button onclick="toggleSection('olderNews', this)">More</button>
         <hr size="2" align="left" noshade="">
     </section>
+
+    <script>
+        function toggleSection(sectionId, button) {
+            var section = document.getElementById(sectionId);
+            if (section.style.display === "none") {
+                section.style.display = "block";
+                button.textContent = "Less"; // Changes the button text to "Less"
+            } else {
+                section.style.display = "none";
+                button.textContent = "More"; // Changes the button text back to "More"
+            }
+        }
+    </script>
+
 
     <section id="publications">
         <h2>Publications</h2>
@@ -198,17 +217,21 @@
         <h2>Awards</h2>
         <font face="helvetica, ariel, 'sans serif'">
             <span style="font-size: 12pt;">
-                <b>[Sep. 2023]</b> "ポリフォニー・デジタル 企業賞" at Visual Computing ([<a href="https://visualcomputing.jp/vc2023/award/">VC2023</a>).  <br>
-                <b>[Oct. 2021 - Mar. 2024]</b> Support for Pioneering Research Initiated by the Next Generation (<a href="https://www.tsukuba.ac.jp/en/academics/jst-spring-program/">SPRING</a>). <br>
-                <b>[Jan. 2017 - Apr. 2017]</b> JASSO Scholarship for Short-term Study in Japan (80,000 JPY/month). <br>
-                <b>[2017]</b> Overseas Study Scholarships Supported by Beijing Higher Education Institutions, Type A (20,000 CNY).  <br>
+                <b>[Mar. 2024]</b> 筑波大学システム情報工学研究群長表彰 (The Dean's Award). <br>
+                <b>[Sep. 2023]</b> "ポリフォニー・デジタル 企業賞" at Visual Computing ([<a href="https://visualcomputing.jp/vc2023/award/">VC2023</a>). <br>
+                <div id="olderAwards" style="display: none;">
+                    <b>[Oct. 2021 - Mar. 2024]</b> Support for Pioneering Research Initiated by the Next Generation (<a href="https://www.tsukuba.ac.jp/en/academics/jst-spring-program/">SPRING</a>). <br>
+                    <b>[Jan. 2017 - Apr. 2017]</b> JASSO Scholarship for Short-term Study in Japan (80,000 JPY/month). <br>
+                    <b>[2017]</b> Overseas Study Scholarships Supported by Beijing Higher Education Institutions, Type A (20,000 CNY). <br>
+                </div>
             </span>
         </font>
+        <button onclick="toggleSection('olderAwards', this)">More</button>
         <hr size="2" align="left" noshade="">
     </section>
 
     <footer>
-        Copyright © 2023 Guoqing Hao, Updated Oct. 2023
+        Copyright © 2024 Guoqing Hao, Updated Apr. 2024
     </footer>
 </body>
 
