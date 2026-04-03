@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Activities &amp; Awards – Guoqing Hao, Assistant Professor at Aoyama Gakuin University.">
+    <title>Activities – Guoqing Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --primary: #2563eb;
+            --primary-light: #eff6ff;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --nav-height: 64px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--nav-height);
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 48px;
+            z-index: 100;
+        }
+
+        .nav-name {
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active { color: var(--primary); }
+
+        /* ── LAYOUT ── */
+        main {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: calc(var(--nav-height) + 64px) 24px 96px;
+        }
+
+        section { margin-bottom: 72px; }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 28px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        /* ── PAGE HEADER ── */
+        .page-header {
+            margin-bottom: 56px;
+        }
+
+        .page-header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .page-header p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        /* ── TIMELINE ── */
+        .timeline {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 88px;
+            top: 8px;
+            bottom: 8px;
+            width: 1px;
+            background: var(--border);
+        }
+
+        .tl-item {
+            display: flex;
+            gap: 0;
+            position: relative;
+            padding-bottom: 28px;
+        }
+
+        .tl-item:last-child { padding-bottom: 0; }
+
+        .tl-date {
+            width: 88px;
+            flex-shrink: 0;
+            padding-right: 20px;
+            padding-top: 2px;
+            text-align: right;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-light);
+            line-height: 1.4;
+        }
+
+        .tl-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--border);
+            border: 2px solid var(--bg);
+            flex-shrink: 0;
+            margin-top: 5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tl-dot--paper  { background: #2563eb; }
+        .tl-dot--award  { background: #d97706; }
+        .tl-dot--grant  { background: #16a34a; }
+        .tl-dot--role   { background: #7c3aed; }
+
+        .tl-body {
+            flex: 1;
+            padding-left: 20px;
+            padding-top: 0;
+        }
+
+        .tl-tag {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 2px 7px;
+            border-radius: 4px;
+            margin-bottom: 4px;
+        }
+
+        .tl-tag--paper  { background: #eff6ff; color: #2563eb; }
+        .tl-tag--award  { background: #fefce8; color: #a16207; }
+        .tl-tag--grant  { background: #f0fdf4; color: #15803d; }
+        .tl-tag--role   { background: #f5f3ff; color: #7c3aed; }
+
+        .tl-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+            line-height: 1.45;
+            margin-bottom: 2px;
+        }
+
+        .tl-desc {
+            font-size: 13px;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        .tl-desc a { color: var(--primary); text-decoration: none; }
+        .tl-desc a:hover { text-decoration: underline; }
+
+        /* ── AWARDS TABLE ── */
+        .awards-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .award-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            padding: 16px 20px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            transition: box-shadow 0.2s;
+        }
+
+        .award-item:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+
+        .award-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .award-body { flex: 1; }
+
+        .award-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 2px;
+        }
+
+        .award-meta {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .award-meta a { color: var(--primary); text-decoration: none; }
+        .award-meta a:hover { text-decoration: underline; }
+
+        /* ── FOOTER ── */
+        footer {
+            text-align: center;
+            padding: 28px 24px;
+            border-top: 1px solid var(--border);
+            color: var(--text-light);
+            font-size: 13px;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 640px) {
+            nav { padding: 0 20px; }
+            .nav-links { display: none; }
+
+            .cv-banner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .timeline::before { left: 72px; }
+            .tl-date { width: 72px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a class="nav-name" href="index.html">Guoqing Hao</a>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#research">Research</a></li>
+            <li><a href="index.html#publications">Publications</a></li>
+            <li><a href="activities.html" class="active">Activities</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- PAGE HEADER -->
+        <div class="page-header">
+            <h1>Activities &amp; Awards</h1>
+            <p>Recent news, awards &amp; honors.</p>
+        </div>
+
+        <!-- RECENT ACTIVITIES -->
+        <section id="activities">
+            <h2>Recent Activities</h2>
+            <ul class="timeline">
+
+                <li class="tl-item">
+                    <span class="tl-date">Apr. 2026</span>
+                    <span class="tl-dot tl-dot--paper"></span>
+                    <div class="tl-body">
+                        <span class="tl-tag tl-tag--paper">Preprint</span>
+                        <div class="tl-title">FlowSlider posted on arXiv</div>
+                        <div class="tl-desc"><em>FlowSlider: Training-Free Continuous Image Editing via Fidelity-Steering Decomposition</em> — <a href="https://arxiv.org/abs/2604.02088" target="_blank">arXiv</a> · <a href="https://huggingface.co/spaces/dominoer/FlowSlider" target="_blank">HuggingFace Space</a></div>
+                    </div>
+                </li>
+
+                <li class="tl-item">
+                    <span class="tl-date">Apr. 2025</span>
+                    <span class="tl-dot tl-dot--grant"></span>
+                    <div class="tl-body">
+                        <span class="tl-tag tl-tag--grant">Grant</span>
+                        <div class="tl-title">JSPS Grant-in-Aid for Early-Career Scientists</div>
+                        <div class="tl-desc">Received research funding from the Japan Society for the Promotion of Science.</div>
+                    </div>
+                </li>
+
+                <li class="tl-item">
+                    <span class="tl-date">Mar. 2024</span>
+                    <span class="tl-dot tl-dot--role"></span>
+                    <div class="tl-body">
+                        <span class="tl-tag tl-tag--role">Position</span>
+                        <div class="tl-title">Joined Aoyama Gakuin University as Assistant Professor</div>
+                        <div class="tl-desc"><a href="https://www.aoyama.ac.jp/en/">Aoyama Gakuin University</a>, Tokyo, Japan.</div>
+                    </div>
+                </li>
+
+                <li class="tl-item">
+                    <span class="tl-date">Mar. 2024</span>
+                    <span class="tl-dot tl-dot--award"></span>
+                    <div class="tl-body">
+                        <span class="tl-tag tl-tag--award">Award</span>
+                        <div class="tl-title">Ph.D. Degree with Dean's Award</div>
+                        <div class="tl-desc">Graduated from <a href="https://www.tsukuba.ac.jp/en/">University of Tsukuba</a> with the 筑波大学システム情報工学研究群長表彰.</div>
+                    </div>
+                </li>
+
+                <li class="tl-item">
+                    <span class="tl-date">Oct. 2023</span>
+                    <span class="tl-dot tl-dot--paper"></span>
+                    <div class="tl-body">
+                        <span class="tl-tag tl-tag--paper">Paper</span>
+                        <div class="tl-title">Paper accepted to IEEE Access</div>
+                        <div class="tl-desc"><em>Natural Image Decay with a Decay Effects Generator</em> — <a href="https://doi.org/10.1109/ACCESS.2023.3328171" target="_blank">DOI</a></div>
+                    </div>
+                </li>
+
+                <li class="tl-item">
+                    <span class="tl-date">Sep. 2023</span>
+                    <span class="tl-dot tl-dot--award"></span>
+                    <div class="tl-body">
+                        <span class="tl-tag tl-tag--award">Award</span>
+                        <div class="tl-title">Polyphony Digital Company Award</div>
+                        <div class="tl-desc">Received at <a href="https://visualcomputing.jp/vc2023/award/" target="_blank">Visual Computing (VC2023)</a>.</div>
+                    </div>
+                </li>
+
+                <li class="tl-item">
+                    <span class="tl-date">Aug. 2023</span>
+                    <span class="tl-dot tl-dot--paper"></span>
+                    <div class="tl-body">
+                        <span class="tl-tag tl-tag--paper">Paper</span>
+                        <div class="tl-title">Paper accepted to SIGGRAPH Asia 2023</div>
+                        <div class="tl-desc"><em>Diffusion-based Holistic Texture Rectification and Synthesis</em> — <a href="https://dominoer.github.io/siggraph_asia_2023_holistic_texture/" target="_blank">Project Page</a></div>
+                    </div>
+                </li>
+
+                <li class="tl-item">
+                    <span class="tl-date">June 2023</span>
+                    <span class="tl-dot tl-dot--paper"></span>
+                    <div class="tl-body">
+                        <span class="tl-tag tl-tag--paper">Paper</span>
+                        <div class="tl-title">Paper accepted to MVA 2023</div>
+                        <div class="tl-desc"><em>Low-Level Feature Aggregation Networks for Disease Severity Estimation of Coffee Leaves</em> — <a href="https://ieeexplore.ieee.org/abstract/document/10215626" target="_blank">Paper</a></div>
+                    </div>
+                </li>
+
+                <li class="tl-item">
+                    <span class="tl-date">July 2020</span>
+                    <span class="tl-dot tl-dot--paper"></span>
+                    <div class="tl-body">
+                        <span class="tl-tag tl-tag--paper">Paper</span>
+                        <div class="tl-title">Paper accepted to BMVC 2020</div>
+                        <div class="tl-desc"><em>Image Harmonization with Attention-based Deep Feature Modulation</em> — <a href="https://dominoer.github.io/bmvc2020_image_harmonization/" target="_blank">Project Page</a></div>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+
+        <!-- AWARDS -->
+        <section id="awards">
+            <h2>Awards &amp; Honors</h2>
+            <ul class="awards-list">
+
+                <li class="award-item">
+                    <span class="award-icon">🏆</span>
+                    <div class="award-body">
+                        <div class="award-title">Dean's Award (システム情報工学研究群長表彰)</div>
+                        <div class="award-meta">University of Tsukuba &nbsp;·&nbsp; March 2024</div>
+                    </div>
+                </li>
+
+                <li class="award-item">
+                    <span class="award-icon">🏅</span>
+                    <div class="award-body">
+                        <div class="award-title">Polyphony Digital Company Award (ポリフォニー・デジタル 企業賞)</div>
+                        <div class="award-meta"><a href="https://visualcomputing.jp/vc2023/award/" target="_blank">Visual Computing (VC2023)</a> &nbsp;·&nbsp; September 2023</div>
+                    </div>
+                </li>
+
+                <li class="award-item">
+                    <span class="award-icon">🎓</span>
+                    <div class="award-body">
+                        <div class="award-title">JSPS Grant-in-Aid for Early-Career Scientists</div>
+                        <div class="award-meta">Japan Society for the Promotion of Science &nbsp;·&nbsp; April 2025</div>
+                    </div>
+                </li>
+
+                <li class="award-item">
+                    <span class="award-icon">🎓</span>
+                    <div class="award-body">
+                        <div class="award-title">Support for Pioneering Research Initiated by the Next Generation (SPRING)</div>
+                        <div class="award-meta"><a href="https://www.tsukuba.ac.jp/en/academics/jst-spring-program/" target="_blank">University of Tsukuba / JST</a> &nbsp;·&nbsp; October 2021 – March 2024</div>
+                    </div>
+                </li>
+
+                <li class="award-item">
+                    <span class="award-icon">✈️</span>
+                    <div class="award-body">
+                        <div class="award-title">JASSO Scholarship for Short-term Study in Japan</div>
+                        <div class="award-meta">80,000 JPY/month &nbsp;·&nbsp; January – April 2017</div>
+                    </div>
+                </li>
+
+                <li class="award-item">
+                    <span class="award-icon">✈️</span>
+                    <div class="award-body">
+                        <div class="award-title">Overseas Study Scholarships — Beijing Higher Education Institutions, Type A</div>
+                        <div class="award-meta">20,000 CNY &nbsp;·&nbsp; 2017</div>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Guoqing Hao &nbsp;·&nbsp; Updated April 2025</p>
+    </footer>
+
+</body>
+</html>

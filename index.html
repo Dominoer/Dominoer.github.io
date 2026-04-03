@@ -1,239 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guoqing Hao - AGU</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: #f3f3f3;
-            padding: 10px;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        footer {
-            border-top: 1px solid #ccc;
-            padding-top: 10px;
-            text-align: center;
-        }
-    .pub-row a {
-        text-decoration: none;
-/*        color: inherit; /* to keep the color consistent with surrounding text */*/
-    }
-
-    .pub-row a:hover {
-        text-decoration: underline; /* to underline when hovered, optional */
-    }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <meta name="description" content="Guoqing Hao – Assistant Professor at Aoyama Gakuin University. Research in computer vision, image synthesis, and machine learning.">
+    <title>Guoqing Hao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<body>
-    <header>
-        <h1>Guoqing Hao</h1>
-        <nav>
-            <a href="#about">About Me</a>
-            <a href="#news">News</a>
-            <a href="#publications">Publications</a>
-            <a href="#awards">Awards</a>
-        </nav>
-    </header>
-
-<section id="about">
-    <h2>About Me</h2>
-    <div style="display: flex; align-items: center;">
-        <img src="./index_files/profile.png" alt="Guoqing's Profile Photo" style="width: 150px; height: auto; margin-right: 20px;">
-        <div>
-            <p>
-                I am an assistant professor at the <a href="https://www.aoyama.ac.jp/en/">Aoyama Gakuin University</a>. I obtained my Ph.D. degree from the <a href="https://www.tsukuba.ac.jp/en/">University of Tsukuba</a> under the supervision of Prof. <a href="http://iizuka.cs.tsukuba.ac.jp/index_eng.html">Satoshi Iizuka</a> and Prof. <a href="http://www.cvlab.cs.tsukuba.ac.jp/~kfukui/english/indexE.html">Kazuhiro Fukui</a>. My research interests are in computer vision, graphics, image processing, and machine learning.
-                <!-- I am currently a 3rd year Ph.D. student under the supervision of Assoc. Prof. <a href="http://iizuka.cs.tsukuba.ac.jp/index_eng.html">Satoshi Iizuka</a> and Prof. <a href="http://www.cvlab.cs.tsukuba.ac.jp/~kfukui/english/indexE.html">Kazuhiro Fukui</a> at the <a href="https://en.home.cvlab.cs.tsukuba.ac.jp/">Computer Vision Lab</a>, <a href="http://www.tsukuba.ac.jp/en/">University of Tsukuba</a>. My research interests are in computer vision, graphichs, image processing, and machine learning. -->
-            </p>
-            <p>
-                <a href="https://github.com/Dominoer" target="_blank"><i class="fab fa-github fa-2x" style="margin-right: 15px;"></i></a>
-                <a href="https://scholar.google.com/citations?user=ulsTvQIAAAAJ&hl=en" target="_blank"><i class="ai ai-google-scholar fa-2x" style="margin-right: 15px;"></i></a>
-                <a href="mailto:hao@it.aoyama.ac.jp" target="_blank"><i class="fas fa-envelope fa-2x" style="margin-right: 15px;"></i></a>
-            </p>
-        </div>
-    </div>
-</section>
-
-
-    <section id="news">
-        <h2>News</h2>
-        <font face="helvetica, ariel, 'sans serif'">
-            <span style="font-size: 12pt;">
-                <b>[April. 2025]</b> I received research funding through the JSPS Grant-in-Aid for Early-Career Scientists.  <br>
-                <b>[Mar. 2024]</b> I obtained my Ph.D. degree in Engineering with the Dean's Award. <br>
-                <b>[Oct. 2023]</b> A first-authored paper on image-based decay has been accepted to IEEE Access. <br>
-                <b>[Sep. 2023]</b> I received the "Polyphony Digital Company Award" at Visual Computing (VC2023). <br>
-                <b>[Aug. 2023]</b> A first-authored paper on texture synthesis has been accepted to SIGGRAPH Asia 2023 Conference Track. <br>
-                <div id="olderNews" style="display: none;">
-                    <b>[June 2023]</b> A co-authored paper on coffee leaf disease severity estimation has been accepted to MVA 2023 as a poster. <br>
-                    <b>[July 2020]</b> Our work on image harmonization was accepted to The British Machine Vision Conference (BMVC2020). <br>
-                </div>
-            </span>
-        </font>
-        <button onclick="toggleSection('olderNews', this)">More</button>
-        <hr size="2" align="left" noshade="">
-    </section>
-
-    <script>
-        function toggleSection(sectionId, button) {
-            var section = document.getElementById(sectionId);
-            if (section.style.display === "none") {
-                section.style.display = "block";
-                button.textContent = "Less"; // Changes the button text to "Less"
-            } else {
-                section.style.display = "none";
-                button.textContent = "More"; // Changes the button text back to "More"
-            }
+        :root {
+            --primary: #2563eb;
+            --primary-light: #eff6ff;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --nav-height: 64px;
         }
-    </script>
 
+        html { scroll-behavior: smooth; }
 
-    <section id="publications">
-        <h2>Publications</h2>
-        <font face="helvetica, ariel, 'sans serif'">
-            <table cellspacing="15">
-                <tbody>
-                    <tr class="pub-row">
-                        <td width="30%" align="left">
-                            <center>
-                                <img width="250" align="center" src="./index_files/access_teaser.png" border="0">
-                            </center>
-                        </td>
-                        <td>
-                            <span style="font-size: 12pt;">
-                                <b>Natural Image Decay with a Decay Effects Generator</b> <br>
-                                <span style="font-size: 10pt;">
-                                    <u>Guoqing Hao</u>,
-                                    Satoshi Iizuka,
-                                    Kensho Hara,
-                                    Hirokatsu Kataoka,
-                                    Kazuhiro Fukui<br>
-                                    IEEE Access, 2023. <br>
-                                    [<a href="https://doi.org/10.1109/ACCESS.2023.3328171">DOI</a>]
-                                    <br>
-                                </span>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr class="pub-row">
-                        <td width="30%" align="left">
-                            <center>
-                                <img width="250" align="center" src="./index_files/sa23_teaser.jpg" border="0">
-                            </center>
-                        </td>
-                        <td>
-                            <span style="font-size: 12pt;">
-                                <b>Diffusion-based Holistic Texture Rectification and Synthesis</b> <br>
-                                <span style="font-size: 10pt;">
-                                    <u>Guoqing Hao</u>,
-                                    Satoshi Iizuka,
-                                    Kensho Hara,
-                                    Edgar Simo-Serra,
-                                    Hirokatsu Kataoka,
-                                    Kazuhiro Fukui<br>
-                                    In SIGGRAPH Asia, 2023. <br>
-                                    [<a href="https://dominoer.github.io/siggraph_asia_2023_holistic_texture/">Project Page</a>]
-                                    [<a href="https://arxiv.org/abs/2309.14759">Paper</a>]
-                                    [<a href="https://github.com/Dominoer/siggraph_asia_2023_holistic_texture/tree/main">Code</a>]
-                                    <br>
-                                </span>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr class="pub-row">
-                        <td width="30%" align="left">
-                            <center>
-                                <img width="250" align="center" src="./index_files/mva23_teaser.png" border="0">
-                            </center>
-                        </td>
-                        <td>
-                            <span style="font-size: 12pt;">
-                                <b>Low-Level Feature Aggregation Networks for Disease Severity Estimation of Coffee Leaves</b> <br>
-                                <span style="font-size: 10pt;">
-                                    Takuhiro Okada,
-                                    Yuantian Huang,
-                                    <u>Guoqing Hao</u>,
-                                    Satoshi Iizuka,
-                                    Kazuhiro Fukui<br>
-                                    In IAPR International Conference on Machine Vision Applications (MVA), 2023. <br>
-                                    [<a href="https://ieeexplore.ieee.org/abstract/document/10215626">Paper</a>]
-                                    <br>
-                                </span>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr class="pub-row">
-                        <td width="30%" align="left">
-                            <center>
-                                <img width="250" align="center" src="./index_files/bmvc2020_teaser.png" border="0">
-                            </center>
-                        </td>
-                        <td>
-                            <span style="font-size: 12pt;">
-                                <b>Image Harmonization with Attention-based Deep Feature Modulation</b> <br>
-                                <span style="font-size: 10pt;">
-                                    <u>Guoqing Hao</u>,
-                                    Satoshi Iizuka,
-                                    Kazuhiro Fukui<br>
-                                    In BMVC, 2020. <br>
-                                    [<a href="https://dominoer.github.io/bmvc2020_image_harmonization/">Project Page</a>]
-                                    [<a href="https://www.bmvc2020-conference.com/assets/papers/0121.pdf">Paper</a>]
-                                    [<a href="https://github.com/Dominoer/bmvc2020_image_harmonization">Code</a>]
-                                    [<a href="https://dominoer.github.io/bmvc2020_image_harmonization/resources/bibtex.bib">Bibtex</a>]
-                                    <br>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </font>
-    </section>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            font-size: 15px;
+        }
 
-    <section id="awards">
-        <h2>Awards</h2>
-        <font face="helvetica, ariel, 'sans serif'">
-            <span style="font-size: 12pt;">
-                <b>[Mar. 2024]</b> 筑波大学システム情報工学研究群長表彰 (The Dean's Award). <br>
-                <b>[Sep. 2023]</b> "ポリフォニー・デジタル 企業賞" at Visual Computing ([<a href="https://visualcomputing.jp/vc2023/award/">VC2023</a>). <br>
-                <div id="olderAwards" style="display: none;">
-                    <b>[Oct. 2021 - Mar. 2024]</b> Support for Pioneering Research Initiated by the Next Generation (<a href="https://www.tsukuba.ac.jp/en/academics/jst-spring-program/">SPRING</a>). <br>
-                    <b>[Jan. 2017 - Apr. 2017]</b> JASSO Scholarship for Short-term Study in Japan (80,000 JPY/month). <br>
-                    <b>[2017]</b> Overseas Study Scholarships Supported by Beijing Higher Education Institutions, Type A (20,000 CNY). <br>
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--nav-height);
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 48px;
+            z-index: 100;
+        }
+
+        .nav-name {
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active { color: var(--primary); }
+
+        /* ── LAYOUT ── */
+        main {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: calc(var(--nav-height) + 64px) 24px 96px;
+        }
+
+        section { margin-bottom: 80px; }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 24px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        /* ── ABOUT ── */
+        .about-grid {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .about-photo {
+            flex-shrink: 0;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 10%;
+            border: 3px solid var(--border);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        .about-bio p {
+            color: var(--text);
+            margin-bottom: 14px;
+        }
+
+        .about-bio a { color: var(--primary); text-decoration: none; }
+        .about-bio a:hover { text-decoration: underline; }
+
+        .social-icons {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 4px;
+        }
+
+        .social-icons a {
+            color: var(--text-light);
+            font-size: 22px;
+            transition: color 0.2s;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover { color: var(--primary); }
+
+        /* ── RESEARCH ── */
+        .research-desc {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.75;
+        }
+
+        .research-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .research-tag {
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid #bfdbfe;
+        }
+
+        /* ── PUBLICATIONS ── */
+        .pub-list {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .pub-card {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            padding: 20px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: box-shadow 0.2s, border-color 0.2s;
+        }
+
+        .pub-card:hover {
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            border-color: #bfdbfe;
+        }
+
+        .pub-thumb {
+            flex-shrink: 0;
+            width: 180px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 8px;
+            background: var(--bg-alt);
+        }
+
+        .pub-info { flex: 1; }
+
+        .pub-venue {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--primary);
+            background: var(--primary-light);
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .pub-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .pub-authors {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .pub-authors u { color: var(--text); font-weight: 600; text-decoration: none; }
+
+        .pub-links { display: flex; flex-wrap: wrap; gap: 8px; }
+
+        .pub-link {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--primary);
+            text-decoration: none;
+            border: 1px solid #bfdbfe;
+            padding: 3px 10px;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .pub-link:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* ── SCHOLAR LINK ── */
+        .scholar-cta {
+            margin-top: 28px;
+            text-align: center;
+        }
+
+        .scholar-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            border: 1.5px solid var(--primary);
+            border-radius: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .scholar-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            text-align: center;
+            padding: 28px 24px;
+            border-top: 1px solid var(--border);
+            color: var(--text-light);
+            font-size: 13px;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 640px) {
+            nav { padding: 0 20px; }
+            .nav-links { display: none; }
+
+            .about-grid {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .social-icons { justify-content: center; }
+
+            .pub-card { flex-direction: column; }
+            .pub-thumb { width: 100%; height: 160px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a class="nav-name" href="index.html">Guoqing Hao</a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="activities.html">Activities</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- ABOUT -->
+        <section id="about">
+            <div class="about-grid">
+                <img class="about-photo" src="./index_files/profile.png" alt="Guoqing Hao">
+                <div class="about-bio">
+                    <h1 style="font-size:30px; font-weight:700; margin-bottom:4px;">Guoqing Hao</h1>
+                    <p style="color:var(--text-light); font-size:14px; margin-bottom:18px;">
+                        Assistant Professor &nbsp;·&nbsp; <a href="https://www.aoyama.ac.jp/en/">Aoyama Gakuin University</a>
+                    </p>
+                    <p>
+                        I am an assistant professor at <a href="https://www.aoyama.ac.jp/en/">Aoyama Gakuin University</a>. I obtained my Ph.D. from the <a href="https://www.tsukuba.ac.jp/en/">University of Tsukuba</a> under the supervision of Prof. <a href="http://iizuka.cs.tsukuba.ac.jp/index_eng.html">Satoshi Iizuka</a> and Prof. <a href="http://www.cvlab.cs.tsukuba.ac.jp/~kfukui/english/indexE.html">Kazuhiro Fukui</a>.
+                    </p>
+                    <p>
+                        I am broadly interested in building systems that can understand, manipulate, and create visual content.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://github.com/Dominoer" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://scholar.google.com/citations?user=ulsTvQIAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+                        <a href="mailto:hao@it.aoyama.ac.jp" title="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
                 </div>
-            </span>
-        </font>
-        <button onclick="toggleSection('olderAwards', this)">More</button>
-        <hr size="2" align="left" noshade="">
-    </section>
+            </div>
+        </section>
+
+        <!-- SELECTED PUBLICATIONS -->
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            <div class="pub-list">
+
+                <div class="pub-card">
+                    <img class="pub-thumb" src="./index_files/flowslider_thumb.jpeg" alt="FlowSlider">
+                    <div class="pub-info">
+                        <span class="pub-venue">arXiv 2026 &nbsp;·&nbsp; Preprint</span>
+                        <div class="pub-title">FlowSlider: Training-Free Continuous Image Editing via Fidelity-Steering Decomposition</div>
+                        <div class="pub-authors">Taichi Endo, <u>Guoqing Hao</u>, Kazuhiko Sumi</div>
+                        <div class="pub-links">
+                            <a class="pub-link" href="https://arxiv.org/abs/2604.02088" target="_blank">arXiv</a>
+                            <a class="pub-link" href="https://huggingface.co/spaces/dominoer/FlowSlider" target="_blank">HuggingFace Space</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card">
+                    <img class="pub-thumb" src="./index_files/sa23_teaser.jpg" alt="Holistic Texture Rectification">
+                    <div class="pub-info">
+                        <span class="pub-venue">SIGGRAPH Asia 2023</span>
+                        <div class="pub-title">Diffusion-based Holistic Texture Rectification and Synthesis</div>
+                        <div class="pub-authors"><u>Guoqing Hao</u>, Satoshi Iizuka, Kensho Hara, Edgar Simo-Serra, Hirokatsu Kataoka, Kazuhiro Fukui</div>
+                        <div class="pub-links">
+                            <a class="pub-link" href="https://dominoer.github.io/siggraph_asia_2023_holistic_texture/" target="_blank">Project Page</a>
+                            <a class="pub-link" href="https://arxiv.org/abs/2309.14759" target="_blank">Paper</a>
+                            <a class="pub-link" href="https://github.com/Dominoer/siggraph_asia_2023_holistic_texture/tree/main" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card">
+                    <img class="pub-thumb" src="./index_files/access_teaser.png" alt="Natural Image Decay">
+                    <div class="pub-info">
+                        <span class="pub-venue">IEEE Access 2023</span>
+                        <div class="pub-title">Natural Image Decay with a Decay Effects Generator</div>
+                        <div class="pub-authors"><u>Guoqing Hao</u>, Satoshi Iizuka, Kensho Hara, Hirokatsu Kataoka, Kazuhiro Fukui</div>
+                        <div class="pub-links">
+                            <a class="pub-link" href="https://doi.org/10.1109/ACCESS.2023.3328171" target="_blank">DOI</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card">
+                    <img class="pub-thumb" src="./index_files/bmvc2020_teaser.png" alt="Image Harmonization">
+                    <div class="pub-info">
+                        <span class="pub-venue">BMVC 2020</span>
+                        <div class="pub-title">Image Harmonization with Attention-based Deep Feature Modulation</div>
+                        <div class="pub-authors"><u>Guoqing Hao</u>, Satoshi Iizuka, Kazuhiro Fukui</div>
+                        <div class="pub-links">
+                            <a class="pub-link" href="https://dominoer.github.io/bmvc2020_image_harmonization/" target="_blank">Project Page</a>
+                            <a class="pub-link" href="https://www.bmvc2020-conference.com/assets/papers/0121.pdf" target="_blank">Paper</a>
+                            <a class="pub-link" href="https://github.com/Dominoer/bmvc2020_image_harmonization" target="_blank">Code</a>
+                            <a class="pub-link" href="https://dominoer.github.io/bmvc2020_image_harmonization/resources/bibtex.bib" target="_blank">Bibtex</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="scholar-cta">
+                <a class="scholar-btn" href="https://scholar.google.com/citations?user=ulsTvQIAAAAJ&hl=en" target="_blank">
+                    <i class="ai ai-google-scholar"></i>
+                    Full publication list on Google Scholar
+                </a>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
-        Copyright © 2024 Guoqing Hao, Updated Apr. 2025
+        <p>© 2025 Guoqing Hao &nbsp;·&nbsp; Updated April 2025</p>
     </footer>
-</body>
 
+</body>
 </html>
