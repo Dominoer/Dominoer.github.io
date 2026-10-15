@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guoqing Hao – Assistant Professor at Aoyama Gakuin University. Research in computer vision, image synthesis, and machine learning.">
+    <meta name="description" content="Guoqing Hao – Specially-appointed Assistant Professor at University of Tsukuba. Research in efficient learning and capability discovery for visual generative models, and healthcare AI.">
     <title>Guoqing Hao</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
@@ -105,6 +105,24 @@
             object-position: center 10%;
             border: 3px solid var(--border);
             box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        .about-meta {
+            margin-bottom: 18px;
+        }
+
+        .about-bio .about-meta p {
+            color: var(--text-light);
+            font-size: 13.5px;
+            line-height: 1.6;
+            margin-bottom: 2px;
+        }
+
+        .about-bio .about-meta .about-role {
+            color: var(--text);
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 4px;
         }
 
         .about-bio p {
@@ -237,21 +255,42 @@
         }
 
         /* ── SCHOLAR LINK ── */
-        .scholar-cta {
-            margin-top: 28px;
-            text-align: center;
+        .section-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px 16px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .section-head h2 { margin: 0; padding: 0; border: 0; }
+
+        .pub-award {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            color: #b45309;
+            background: #fef3c7;
+            border: 1px solid #fcd34d;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin: 0 0 8px 6px;
+            text-decoration: none;
         }
 
         .scholar-btn {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 10px 24px;
+            padding: 6px 16px;
             border: 1.5px solid var(--primary);
             border-radius: 8px;
             color: var(--primary);
             text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             transition: all 0.2s;
         }
@@ -308,19 +347,20 @@
                 <img class="about-photo" src="./index_files/profile.png" alt="Guoqing Hao">
                 <div class="about-bio">
                     <h1 style="font-size:30px; font-weight:700; margin-bottom:4px;">Guoqing Hao</h1>
-                    <p style="color:var(--text-light); font-size:14px; margin-bottom:18px;">
-                        Assistant Professor &nbsp;·&nbsp; <a href="https://www.aoyama.ac.jp/en/">Aoyama Gakuin University</a>
-                    </p>
+                    <div class="about-meta">
+                        <p class="about-role">Specially-appointed Assistant Professor &nbsp;·&nbsp; <a href="https://www.tsukuba.ac.jp/en/">University of Tsukuba</a></p>
+                        <p>Institute of Systems and Information Engineering</p>
+                        <p>Center for Artificial Intelligence Research</p>
+                        <p><a href="https://home.cvlab.cs.tsukuba.ac.jp/">CVLAB</a></p>
+                        <p>Ph.D in Engineering</p>
+                    </div>
                     <p>
-                        I am an assistant professor at <a href="https://www.aoyama.ac.jp/en/">Aoyama Gakuin University</a>. I obtained my Ph.D. from the <a href="https://www.tsukuba.ac.jp/en/">University of Tsukuba</a> under the supervision of Prof. <a href="http://iizuka.cs.tsukuba.ac.jp/index_eng.html">Satoshi Iizuka</a> and Prof. <a href="http://www.cvlab.cs.tsukuba.ac.jp/~kfukui/english/indexE.html">Kazuhiro Fukui</a>.
-                    </p>
-                    <p>
-                        I am broadly interested in building systems that can understand, manipulate, and create visual content.
+                        I am broadly interested in building systems that can understand, manipulate, and create visual content. I'm especially interested in how models can learn more from the same data and do more with what they have already learned, with a focus on efficient learning and capability discovery in visual generative models. I also work closely on healthcare AI with Prof. <a href="https://jpn.nec.com/dx/specialist/hitoshi_imaoka/index.html">Hitoshi Imaoka</a> (NEC Fellow).
                     </p>
                     <div class="social-icons">
                         <a href="https://github.com/Dominoer" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                         <a href="https://scholar.google.com/citations?user=ulsTvQIAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-                        <a href="mailto:hao@it.aoyama.ac.jp" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="mailto:hao.guoqing.ke@u.tsukuba.ac.jp" title="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
@@ -328,15 +368,21 @@
 
         <!-- SELECTED PUBLICATIONS -->
         <section id="publications">
-            <h2>Selected Publications</h2>
+            <div class="section-head">
+                <h2>Selected Publications</h2>
+                <a class="scholar-btn" href="https://scholar.google.com/citations?user=ulsTvQIAAAAJ&hl=en" target="_blank">
+                    <i class="ai ai-google-scholar"></i>
+                    Full publication list on Google Scholar
+                </a>
+            </div>
             <div class="pub-list">
 
                 <div class="pub-card">
                     <img class="pub-thumb" src="./index_files/flowslider_thumb.jpeg" alt="FlowSlider">
                     <div class="pub-info">
-                        <span class="pub-venue">arXiv 2026 &nbsp;·&nbsp; Preprint</span>
+                        <span class="pub-venue">IW-FCV 2026</span><a class="pub-award" href="https://sites.me.tokushima-u.ac.jp/IW-FCV2026/awards.html" target="_blank">Best Paper Award</a>
                         <div class="pub-title">FlowSlider: Training-Free Continuous Image Editing via Fidelity-Steering Decomposition</div>
-                        <div class="pub-authors">Taichi Endo, <u>Guoqing Hao</u>, Kazuhiko Sumi</div>
+                        <div class="pub-authors">Taichi Endo, <u>Guoqing Hao</u>, Masaya Takanashi, Kazuhiko Sumi</div>
                         <div class="pub-links">
                             <a class="pub-link" href="https://arxiv.org/abs/2604.02088" target="_blank">arXiv</a>
                             <a class="pub-link" href="https://huggingface.co/spaces/dominoer/FlowSlider" target="_blank">HuggingFace Space</a>
@@ -386,19 +432,12 @@
                 </div>
 
             </div>
-
-            <div class="scholar-cta">
-                <a class="scholar-btn" href="https://scholar.google.com/citations?user=ulsTvQIAAAAJ&hl=en" target="_blank">
-                    <i class="ai ai-google-scholar"></i>
-                    Full publication list on Google Scholar
-                </a>
-            </div>
         </section>
 
     </main>
 
     <footer>
-        <p>© 2025 Guoqing Hao &nbsp;·&nbsp; Updated April 2025</p>
+        <p>© 2026 Guoqing Hao &nbsp;·&nbsp; Updated October 2026</p>
     </footer>
 
 </body>
